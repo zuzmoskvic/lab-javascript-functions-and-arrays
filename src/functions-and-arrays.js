@@ -73,3 +73,29 @@ function averageNumbers(array) {
     }
     return average;
 }
+
+// // #### Iteration #4.2: Array of strings
+
+// Implement the function named `averageWordLength` that receives as a single argument an array of words and returns the average length of the words:
+
+// You can use the following array to test your solution:
+
+// ```javascript
+// const words = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+// ```
+
+// <br>
+
+function averageWordLength(words){
+
+    if (words.length === 0) { return null };
+    
+    let averageLength;
+    let totalLength = 0;
+
+    for (let i=0; i<words.length; i++) { 
+        totalLength += words[i].length 
+    }
+    averageLength = totalLength / words.length;
+    return averageLength;
+}
