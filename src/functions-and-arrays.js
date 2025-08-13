@@ -25,3 +25,23 @@ function findLongestWord(words) {
         }
         return longestWord;
 }
+
+// ### Iteration #3: Calculate the sum
+
+// #### Iteration #3.1: Sum numbers
+
+// Calculating a sum can be as simple as iterating over an array and adding each of the elements together.
+
+// Implement the function named `sumNumbers` that takes an array of numbers as an argument, and returns the sum of all of the numbers in the array. Later in the course, we will learn how to do this by using the `reduce` array method, which will make your work significantly easier. For now, let's practice _the "declarative"_ way of adding values, using loops.
+
+// You can use the following array to test your solution:
+
+// ```javascript
+// const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+// ```
+
+function sumNumbers(numbers) {
+    let sum = 0;
+    for (let number of numbers) { sum += number }
+    return sum;
+}
