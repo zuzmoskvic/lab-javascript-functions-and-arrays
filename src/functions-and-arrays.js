@@ -135,3 +135,17 @@ function doesWordExist(words, searchWord){
     if (words.length === 0 ) return null 
     return words.includes(searchWord) ? true : false;
 }
+
+// ### Iteration #7: Count repetition
+
+// Declare a function named `howManyTimes` that will take in an array of words as the first argument, and a word to search for as the second argument. The function will return the number of times that word appears in the array.
+
+function howManyTimes(words, searchWord) {
+    let sum = 0;
+    for (let word of words) {
+        if (word === searchWord) {
+            sum++
+        }
+    }
+    return sum;
+}
