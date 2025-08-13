@@ -99,3 +99,20 @@ function averageWordLength(words){
     averageLength = totalLength / words.length;
     return averageLength;
 }
+
+// ### Iteration #5: Unique arrays
+
+// Take the following array, remove the duplicates, and return a new array. You are more than likely going to want to check out the Array methods [`indexOf`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) and [`includes`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
+
+// Do this in the form of a function `uniquifyArray` that receives an array of words as an argument.
+
+function uniquifyArray(array){
+    if (array.length === 0) { return null};
+    let uniquedArray = [];
+    for (let item of array) {
+        if (!uniquedArray.includes(item)){
+            uniquedArray.push(item);
+        }
+    }
+    return uniquedArray;
+}
