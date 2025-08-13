@@ -116,3 +116,22 @@ function uniquifyArray(array){
     }
     return uniquedArray;
 }
+
+// ### Iteration #6: Find elements
+
+// Let's create a simple array search.
+
+// Declare a function named `doesWordExist` that will take in an array of words as one argument, and a *word to search* for as the other. Return `true` if the word exists in the array, otherwise, return `false`.
+
+// You can use the following array to test your solution:
+
+// ```javascript
+// const words = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+// ```
+
+// <br>
+
+function doesWordExist(words, searchWord){
+    if (words.length === 0 ) return null 
+    return words.includes(searchWord) ? true : false;
+}
