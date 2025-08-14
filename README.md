@@ -2,7 +2,29 @@
 
 # LAB | JS Functions & Arrays
 
-<br>
+<details>
+  <summary>
+   <h2>Learning Goals</h2>
+  </summary>
+
+  This exercise allows you to practice and apply the concepts and techniques taught in class. 
+
+  Upon completion of this exercise, you will be able to:
+
+  - Run predefined tests in Jasmine to verify that the program meets the technical requirements.
+  - Identify expected code behavior by reading and understanding test results and errors.
+  - Declare and invoke functions using function declaration, function expression, and arrow function syntax.
+  - Use the `return`  keyword to return a value from a function.
+  - Pass primitive values as arguments to functions.
+  - Pass arrays to functions as arguments.
+  - Access items stored in arrays using the indexes,
+  - Add, remove and check for items in an array using the index and array methods (`unshift`, `push`, `splice`, `shift`, `pop`, `indexOf`, and `includes`).
+  - Iterate over arrays using the `for`  and `forEach` loops.
+
+  <br>
+  <hr> 
+
+</details>
 
 ## Introduction
 
@@ -30,21 +52,21 @@ git push origin master
 
 ### What is automated testing?
 
-Automated software testing is the process of programmatically executing an application in order to validate and verify that it meets the business needs, as well as the technical requirements, and that it behaves as expected.
+Automated software testing is the process of programmatically executing an application to validate and verify that it meets the business needs, as well as the technical requirements, and that it behaves as expected.
 
-Testing should be viewed as a continuous process, not a discrete operation or single activity in the development lifecycle. Designing tests at the beginning of the product lifecycle can help to mitigate common issues that arise when developing complex code bases.
+Testing should be viewed as a continuous process, not a discrete operation or single activity in the development lifecycle. Designing tests at the beginning of the product lifecycle can mitigate common issues that arise when developing complex code bases.
 
 Having a strong *test suite* can provide you the ease of mind since you will be able to confidently improve upon your work while knowing that your not breaking a previously developed feature.
 <br>
 
 ### Testing labs
 
-This LAB, along with some of the labs you will be working on during the bootcamp, is equipped with unit tests to provide automated feedback on your lab progress.
+This LAB and some labs you will work on during the bootcamp are equipped with unit tests to provide automated feedback on your lab progress.
 <br>
 
 ### Testing with Jasmine
 
-Jasmine is an automated testing framework for JavaScript. It is designed to be used in Behavior-driven Development (**BDD**) programming, which focuses more on the business value than on the technical details.
+Jasmine is an automated testing framework for JavaScript. It is designed to be used in Behavior-driven Development (**BDD**) programming, focusing more on the business value than the technical details.
 
 We have already included Jasmine in the project you just forked, so let's see how to use it to implement our code.
 <br>
@@ -65,9 +87,9 @@ lab-js-functions-and-arrays
       └── functions-and-arrays.spec.js
 ```
 
-We will be working with the `src/functions-and-arrays.js`. In the `jasmine` folder you can find all of the files needed to use Jasmine. All these files are already linked with the `SpecRunner.html` file. 
+We will be working with the `src/functions-and-arrays.js`. You can find all the files in the `jasmine` folder needed to use Jasmine. All these files are already linked with the `SpecRunner.html` file. 
 
-In case you want to check the tests, they are in the `tests/functions-and-arrays.spec.js` file.
+If you want to check the tests, they are in the `tests/functions-and-arrays.spec.js` file.
 
 
 #### Run tests
@@ -79,19 +101,19 @@ Running automated tests with Jasmine is super easy. All you need to do is open t
 
 #### Pass the tests
 
-You should write your code on the `src/functions-and-arrays.js` file. While following the instructions for each iteration, you should check every test and make sure it's *passing*, before moving on.
+You should write your code on the `src/functions-and-arrays.js` file. While following the instructions for each iteration, you should check every test and ensure it's *passing*, before moving on.
 
-Do not rush. You should take your time to carefully read every iteration, and you should address the *breaking* tests as you progress through the exercise.
+Do not rush. You should take your time to read every iteration carefully and address the *breaking* tests as you progress through the exercise.
 
-When coding with tests, it is super important that you carefully read and understand the errors you are getting, this way you will know for sure what's expected from your code.
+When coding with tests, it is super important that you carefully read and understand the errors you are getting. This way, you will know what's expected from your code.
 
-To see the output of your JavaScript code open the [Console in the Developer Tools](https://developer.chrome.com/docs/devtools/open/#console).
+To see the output of your JavaScript code, open the [Console in the Developer Tools](https://developer.chrome.com/docs/devtools/open/#console).
 
-**Important:** Note that **you don't need to execute the functions yourself**; the tests will automatically load and execute the functions on each test run. All you need to do is declare the functions, ensure that they handle the parameters passed and that they return what is indicated in the iteration instructions and the test description. For some iterations, we provide you with a sample array, so that you can do some **manual** testing if you wish.
+**Important:** Note that **you don't need to execute the functions yourself**; the tests will automatically load and execute the functions on each test run. All you need to do is declare the functions, ensure they handle the parameters passed and return what is indicated in the iteration instructions and the test description. We provide you with a sample array for some iterations, so you can do some **manual** testing if you wish.
 
 ## Instructions
 
-While following the instructions for each iteration, make sure to carefully read the instructions and test descriptions to fully understand the task requirements. Do not rush. You should take your time to carefully read every iteration.
+While following the instructions for each iteration, carefully read the instructions and test descriptions to understand the task requirements fully. Do not rush. It would be best if you took your time to read every iteration carefully.
 
 <br>
 
@@ -119,7 +141,7 @@ const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard',
 
 Calculating a sum can be as simple as iterating over an array and adding each of the elements together.
 
-Implement the function named `sumNumbers` that takes an array of numbers as an argument, and returns the sum of all of the numbers in the array. Later in the course, we will learn how to do this by using the `reduce` array method, which will make your work significantly easier. For now, let's practice _the "declarative"_ way of adding values, using loops.
+Implement the function named `sumNumbers` that takes an array of numbers as an argument and returns the sum of all the numbers in the array. Later in the course, we will learn how to do this using the `reduce` array method, making your work significantly easier. For now, let's practice _the "declarative"_ way of adding values using loops.
 
 You can use the following array to test your solution:
 
@@ -131,13 +153,9 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 #### Bonus - Iteration #3.2: A generic `sum()` function
 
-**The goal: Learn how to refactor your code.** :muscle:
+In iteration 3, you created a function that returns the sum of an array of numbers. But what if we want to calculate the sum of the length of words in an array? What if it also includes _boolean_ values? To achieve this, we must create a function allowing this flexibility.
 
-In iteration 3, you created a function that returns the sum of an array of numbers. But what if we wanted to know what was the sum of the length of all of the words in an array? What if we wanted to add _boolean_ values to the mix? We wouldn't be able to use the same function as above, or better saying, we would have to _tweak_ it a little bit so that it can be reused no matter what is in the array that is passed as an argument when function `sumNumbers()` is called.
-
-Here we are applying a concept we call **polymorphism**, that is, dealing with a function's input independently of the types they are passed as.
-
-Let's implement the function `sum()` that calculates the sum for an array filled with (_almost_) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
+You should implement the function `sum()` in this iteration. The function should take an array of mixed values - numbers, strings, and booleans. The function should add all the string lengths, numeric values, and numeric values of booleans to the total sum and return the sum. 
 
 You can use the following array to test your solution:
 
@@ -147,16 +165,24 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 // should return: 57
 ```
 
+
+Note: Your function should only accept an array with numbers, strings, or booleans. If the array contains any other data type, such as an object, you should [throw an error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw). In JavaScript, the syntax for throwing an error is as follows:
+```javascript
+throw new Error("Error message goes here");
+```
+
+When specifying the error message, you should be specific and descriptive in explaining the error.
+
 <br>
 
 ### Iteration #4: Calculate the average
 
-Calculating an average is a very common task. Let's practice it a bit.
+Calculating an average is a prevalent task. So let's practice it a bit.
 
 **The logic behind this:**
 
 1. Find the sum as we did in the first exercise (or how about reusing the function `sumNumbers()`?)
-2. Take that sum and divide it by the number of elements in the array.
+2. Divide that sum by the number of elements in the array.
 
 <br>
 
@@ -185,7 +211,7 @@ const words = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart',
 
 #### Bonus - Iteration #4.3: A generic `avg()` function
 
-Create function `avg(arr)` that receives any mixed array and calculates the average. Consider as a mixed array an array filled with numbers and/or strings and/or booleans.
+Create function `avg(arr)` that receives any mixed array and calculates the average. For example, consider an array filled with numbers and/or strings and/or booleans as a mixed array.
 
 The non-numerical values should be counted as follows:
 
@@ -232,7 +258,7 @@ const words = [
 
 Let's create a simple array search.
 
-Declare a function named `doesWordExist` that will take in an array of words as one argument, and a *word to search* for as the other. Return `true` if the word exists in the array, otherwise, return `false`.
+Declare a function named `doesWordExist` that will take in an array of words as one argument and a *word to search* for as the other. Return `true` if the word exists in the array; otherwise, return `false`.
 
 You can use the following array to test your solution:
 
@@ -244,7 +270,7 @@ const words = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', '
 
 ### Iteration #7: Count repetition
 
-Declare a function named `howManyTimes` that will take in an array of words as the first argument, and a word to search for as the second argument. The function will return the number of times that word appears in the array.
+Declare a function named `howManyTimes` that will take in an array of words as the first argument and a word to search for as the second argument. The function will return the number of times that word appears in the array.
 
 You can use the following array to test your solution:
 
@@ -371,7 +397,7 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
   <summary>How do you find a length of a string in JavaScript?</summary>
   <br>
 
-  To find the length of a string use the `length` property. Here is an example:
+  To find the length of a string, use the `length` property. Here is an example:
 
   ```js
   const str = "Hello, world!"";
@@ -407,7 +433,7 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
   }
   ```
 
-  The initialization is where you declare a counter variable and set its initial value.
+  In initialization, you declare a counter variable and set its initial value.
 
   The condition is a boolean expression that is evaluated before each iteration of the loop. If the condition is `true`, the loop will continue. Once the condition turns `false`, the loop will terminate. 
 
@@ -446,7 +472,7 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
   <summary>How do I loop over an array using the <code>forEach()</code> method?</summary>
   <br>
 
-  The `forEach()` method executes a provided function once for each array element. It does not return a new array, but rather executes the function on each element in the array.
+  The `forEach()` method executes a provided function once for each array element. It does not return a new array but rather executes the function on each element in the array.
 
   The syntax of the `forEach()` method is as follows:
 
@@ -486,7 +512,7 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
   <summary>What could cause <code>array.length</code> to return <code>undefined</code>?</summary>
   <br>
 
-  If you try to access the `.length` property on an array (e.g., `array.length`) but you are getting `undefined` it means that the variable you are accessing is not actually an array.
+  If you try to access the `.length` property on an array (e.g., `array.length`) but get `undefined`, it means that the variable you are accessing is not actually an array.
 
   <br>
 
@@ -502,7 +528,7 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
   <summary>Why is my function returning the last element of the array instead of the longest one?</summary>
   <br>
 
-  Your function might not be correctly checking for the longest element in the array. In other words, there may be an issue with the logic of the conditional statements in the function, or with the comparison being used in the conditionals.
+  Your function might not be correctly checking for the longest element in the array. In other words, there may be an issue with the logic of the conditional statements in the function or with the comparison being used in the conditionals.
 
   To fix this issue, you should check the logic of the conditional statements in the function.
 
@@ -528,7 +554,7 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
 
   <br>
 
-  To compare the length of each element you should use a conditional statement in the following way:
+  To compare the length of each element, you should use a conditional statement in the following way:
 
   ```js
     if ( words[i].length > longestWord.length) {
@@ -544,28 +570,23 @@ Following the logic you've used in iteration #8.1, declare a function called `gr
   <summary>I am unable to push changes to the repository. What should I do?</summary>
   <br>
 
-  There are a couple of possible reasons why you may be unable to *push* changes to a Git repository:
+There are a couple of possible reasons why you may be unable to *push* changes to a Git repository:
 
-  1. **You have not committed your changes:** Before you can push your changes to the repository, you need to commit them using the `git commit` command. Make sure you have committed your changes and try pushing again. To do this, run the following terminal commands from the project folder:
+1. **You have not committed your changes:** Before you can push your changes to the repository, you need to commit them using the `git commit` command. Make sure you have committed your changes and try pushing again. To do this, run the following terminal commands from the project folder:
+  ```bash
+  git add .
+  git commit -m "Your commit message"
+  git push
+  ```
+2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a *Fork* first, you do not have write access to the repository.
+To check which remote repository you have cloned, run the following terminal command from the project folder:
+  ```bash
+  git remote -v
+  ```
+If the link shown is the same as the main Ironhack repository, you will need to fork the repository to your GitHub account first and then clone your fork to your local machine to be able to push the changes.
 
-   ```bash
-   git add .
-   git commit -m "Your commit message"
-   git push
-   ```
-
-  2. **You do not have permission to push to the repository:** If you have cloned the repository directly from the main Ironhack repository without making a *Fork* first, you do not have write access to the repository.
-  To check which remote repository you have cloned, run the following terminal command from the project folder:
-
-   ```bash
-   git remote -v
-   ```
-
-  If the link shown is the same as the main Ironhack repository, you will need to fork the repository to your GitHub account first, and then clone your fork to your local machine to be able to push the changes.
-
-   Note: You may want to make a copy of the code you have locally, to avoid losing it in the process.
+**Note**: You should make a copy of your local code to avoid losing it in the process.
 
   [Back to top](#faqs)
 
 </details>
-
