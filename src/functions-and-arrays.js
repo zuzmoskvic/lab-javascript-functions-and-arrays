@@ -222,3 +222,44 @@ const matrix = [
 ];
 
 console.log(greatestProduct(matrix));
+
+
+// #### Bonus - Iteration #3.2: A generic `sum()` function
+
+// **The goal: Learn how to refactor your code.** :muscle:
+
+// In iteration 3, you created a function that returns the sum of an array of numbers. But what if we wanted to know what was the sum of the length of all of the words in an array? What if we wanted to add _boolean_ values to the mix? We wouldn't be able to use the same function as above, or better saying, we would have to _tweak_ it a little bit so that it can be reused no matter what is in the array that is passed as an argument when function `sumNumbers()` is called.
+
+// Here we are applying a concept we call **polymorphism**, that is, dealing with a function's input independently of the types they are passed as.
+
+// Let's implement the function `sum()` that calculates the sum for an array filled with (_almost_) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.
+
+// You can use the following array to test your solution:
+
+// ```javascript
+// const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+
+// // should return: 57
+// ```
+
+function sum(arr) {
+  let total = 0;
+
+  for (let item of arr) {
+    if (typeof item === 'number') {
+      total += item;
+    } else if (typeof item === 'string') {
+      total += item.length;
+    } else if (typeof item === 'boolean') {
+      total += item ? 1 : 0;
+    } else if (typeof item === 'array') {
+      throw new Error("Unsupported data type sir or ma'am");
+    } else if (typeof item === 'object') {
+      throw new Error("Unsupported data type sir or ma'am");
+    }
+    
+  }
+
+  return total;
+}
+
